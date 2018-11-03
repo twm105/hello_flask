@@ -13,9 +13,10 @@
                 {% if current_user.is_anonymous %}
                 <a href="{{ url_for('login') }}">Login</a>
                 {% else %}
+                <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
                 <a href="{{ url_for('logout') }}">Logout</a>
                 {% endif %}
-                <p>{{ user_count }} users registered with microblog!</p>
+                <!-- <p>{{ user_count }} users registered with microblog!</p> -->
         </div>
         <hr> <!-- horizontal rule, thematic break that isn't visualised in html5 -->
         {% with messages = get_flashed_messages() %}
