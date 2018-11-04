@@ -6,6 +6,7 @@ from flask_login import LoginManager
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
+from flask_mail import Mail
 
 
 app = Flask(__name__)
@@ -14,6 +15,7 @@ db = SQLAlchemy(app) # python sql abstraction
 migrate = Migrate(app,db) # manages changes to the database model, analogous to git...
 login = LoginManager(app)
 login.login_view = 'login' # tells Flask-Login the login view (route) function
+mail = Mail(app)
 
 
 if not app.debug:
@@ -32,6 +34,11 @@ if not app.debug:
         mail_handler.setLevel(logging.ERROR)
         app.logger.addHandler(mail_handler)
         
+        # PYTHON DEBUGGING SERVER COMMANDS:
+        # python -m smtpd -n -c DebuggingServer localhost:8025
+        # set MAIL_SERVER=localhost
+        # set MAIL_PORT=8025
+
         # GMAIL MAIL SERVER DETAILS (allow 'less secure apps'):
         # set MAIL_SERVER=smtp.googlemail.com
         # set MAIL_PORT=587

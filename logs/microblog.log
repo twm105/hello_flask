@@ -1,18 +1,7 @@
-2018-11-03 22:36:03,724 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-03 22:39:48,415 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-03 23:56:45,616 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-03 23:57:00,793 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 01:11:46,401 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 01:16:44,501 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 01:17:53,416 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 01:19:26,752 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 01:29:26,377 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 01:47:14,246 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 13:41:37,006 INFO: Microblog startup [in c:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 13:48:03,210 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 15:26:59,277 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 15:35:19,855 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 15:35:52,585 ERROR: Exception on /explore [GET] [in C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py:1761]
+2018-11-04 22:20:07,364 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:59]
+2018-11-04 22:20:21,184 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:59]
+2018-11-04 22:23:45,659 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:59]
+2018-11-04 22:23:49,879 ERROR: Exception on /reset_password_request [GET] [in C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -26,10 +15,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\routes.py", line 42, in explore
-    return render_template('index.html', title='Explore', posts=posts)
+  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\routes.py", line 112, in reset_password_request
+    title='Reset Password', form=form)
   File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\templating.py", line 117, in _render
@@ -42,29 +29,10 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\base.html", line 32, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\index.html", line 19, in block "content"
-    {% include '_post.html' %}
-  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\_post.html", line 4, in top-level template code
-    <td><img src="{{ user.avatar(32) }}"></td>
+  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\reset_password_request.html", line 1, in top-level template code
+    {% extends base.html %}
   File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\environment.py", line 430, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'user' is undefined
-2018-11-04 15:39:37,426 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 15:42:41,767 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 15:43:36,739 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 15:51:35,325 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 15:59:58,903 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 16:27:33,398 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 16:29:33,000 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 16:41:45,368 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 16:53:21,869 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 16:54:29,560 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 16:56:48,230 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 17:00:13,387 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 17:01:08,716 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 17:03:58,280 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
-2018-11-04 17:04:23,620 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:52]
+jinja2.exceptions.UndefinedError: 'base' is undefined
+2018-11-04 22:25:40,876 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:59]
+2018-11-04 22:28:54,087 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:59]
