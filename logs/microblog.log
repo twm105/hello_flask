@@ -37,3 +37,6 @@ jinja2.exceptions.UndefinedError: 'base' is undefined
 2018-11-04 22:25:40,876 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:59]
 2018-11-04 22:28:54,087 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:59]
 2018-11-08 20:13:19,162 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:61]
+2018-11-08 20:20:52,762 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:61]
+2018-11-08 20:33:16,070 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:63]
+2018-11-08 20:36:13,757 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:63]
