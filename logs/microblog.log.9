@@ -1,0 +1,71 @@
+2018-11-10 18:15:47,093 ERROR: Exception on /favicon.ico [GET] [in C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\werkzeug\routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\errors.py", line 7, in not_found_error
+    return render_template('404.html'), 404 # others return 200 as default
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 6, in block "html"
+    {%- block head %}
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 7, in block "head"
+    <title>{% block title %}{{title|default}}{% endblock title %}</title>
+  File "C:\Users\tmais\Documents\Coding\Python\hello_flask\app\templates\base.html", line 4, in block "title"
+    {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\ext.py", line 134, in _gettext_alias
+    return __context.call(__context.resolve('gettext'), *args, **kwargs)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\jinja2\ext.py", line 140, in gettext
+    rv = __context.call(func, __string)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_babel\__init__.py", line 116, in <lambda>
+    lambda x: get_translations().ugettext(x),
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_babel\__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\flask_babel\__init__.py", line 261, in get_locale
+    locale = Locale.parse(rv)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\babel\core.py", line 268, in parse
+    parts = parse_locale(identifier, sep=sep)
+  File "C:\Users\tmais\Envs\hello_flask\lib\site-packages\babel\core.py", line 1094, in parse_locale
+    raise ValueError('expected only letters, got %r' % lang)
+ValueError: expected only letters, got 'en-gb'
+2018-11-10 18:16:35,943 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:65]
+2018-11-10 18:18:51,877 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:65]
+2018-11-10 18:22:34,752 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\hello_flask\app\__init__.py:65]
