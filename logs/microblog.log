@@ -1,4 +1,4 @@
-2019-06-16 18:01:31,751 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+2019-06-20 22:28:51,581 ERROR: Exception on /user/swimmo/popup [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,9 +14,65 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 146, in search
-    if total > page * current_app.config['POSTS_PER_PAGE'] else None
-TypeError: '>' not supported between instances of 'dict' and 'int'
-2019-06-16 18:36:33,334 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 18:38:07,040 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 18:41:29,357 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 157, in user_popup
+    return render_template('user_popup.html', user=user)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\user_popup.html", line 16, in top-level template code
+    {{ _('%(count)d following', count=user.following.count()) }}</p>
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'following'
+2019-06-20 22:32:09,730 ERROR: Exception on /user/swimmo/popup [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 157, in user_popup
+    return render_template('user_popup.html', user=user)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\user_popup.html", line 16, in top-level template code
+    {{ _('%(count)d following', count=user.followed.count()) }}</p>
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'following'
+2019-06-20 22:33:06,911 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:36:42,881 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:39:21,671 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:43:25,849 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:47:24,475 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:50:18,078 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:52:24,910 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:58:50,669 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
