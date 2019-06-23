@@ -86,6 +86,7 @@
                 $(destElem).text("{{ _('Error: Could not contact server.') }}");
             });
         }
+        // user profile popup
         $(function() {
             var timer = null;
             var xhr = null;
@@ -128,6 +129,7 @@
                 }
             );
         });
+        // unread messages badge updates
         function set_message_count(n) {
             $('#message_count').text(n);
             $('#message_count').css('visibility', n ? 'visible' : 'hidden')

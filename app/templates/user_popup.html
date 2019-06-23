@@ -25,6 +25,12 @@
                             {{ _('Unfollow') }}
                     </a>
                     {% endif %}
+                    <p>
+                        <a href="{{ url_for('main.send_message',
+                                            recipient=user.username) }}">
+                            {{ _('Send message') }}
+                        </a>
+                    </p>
                 {% endif %}
             </small>
         </td>

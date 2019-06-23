@@ -83,3 +83,5 @@ elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HT
 2019-06-23 21:06:38,932 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
 2019-06-23 21:14:28,439 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
 2019-06-23 21:15:56,878 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 21:28:22,977 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 21:30:24,195 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
