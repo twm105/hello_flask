@@ -81,3 +81,5 @@ Traceback (most recent call last):
 elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x04A674D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x04A674D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
 2019-06-23 20:48:16,559 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
 2019-06-23 21:06:38,932 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 21:14:28,439 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 21:15:56,878 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
