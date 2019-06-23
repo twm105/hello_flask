@@ -1,11 +1,4 @@
-2019-06-16 17:54:08,122 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 674, in comparator
-    comparator_factory = self.type.comparator_factory
-AttributeError: 'NoneType' object has no attribute 'comparator_factory'
-
-During handling of the above exception, another exception occurred:
-
+2019-06-20 22:28:51,581 ERROR: Exception on /user/swimmo/popup [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -21,36 +14,26 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\models.py", line 22, in search
-    db.case(when, value=cls.id)), total
-  File "<string>", line 2, in order_by
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\base.py", line 201, in generate
-    fn(self, *args[1:], **kw)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 1716, in order_by
-    criterion = self._adapt_col_list(criterion)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in _adapt_col_list
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in <listcomp>
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 4263, in _literal_as_label_reference
-    elif hasattr(element, '__clause_element__'):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 684, in __getattr__
-    return getattr(self.comparator, key)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\util\langhelpers.py", line 767, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 678, in comparator
-    "is not a TypeEngine class or object" % self.type)
-TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
-2019-06-16 17:54:22,395 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 674, in comparator
-    comparator_factory = self.type.comparator_factory
-AttributeError: 'NoneType' object has no attribute 'comparator_factory'
-
-During handling of the above exception, another exception occurred:
-
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 157, in user_popup
+    return render_template('user_popup.html', user=user)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\user_popup.html", line 16, in top-level template code
+    {{ _('%(count)d following', count=user.following.count()) }}</p>
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'following'
+2019-06-20 22:32:09,730 ERROR: Exception on /user/swimmo/popup [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -66,65 +49,45 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\models.py", line 22, in search
-    db.case(when, value=cls.id)), total
-  File "<string>", line 2, in order_by
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\base.py", line 201, in generate
-    fn(self, *args[1:], **kw)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 1716, in order_by
-    criterion = self._adapt_col_list(criterion)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in _adapt_col_list
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in <listcomp>
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 4263, in _literal_as_label_reference
-    elif hasattr(element, '__clause_element__'):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 684, in __getattr__
-    return getattr(self.comparator, key)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\util\langhelpers.py", line 767, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 678, in comparator
-    "is not a TypeEngine class or object" % self.type)
-TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
-2019-06-16 17:58:00,159 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 17:58:11,778 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 157, in user_popup
+    return render_template('user_popup.html', user=user)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 146, in search
-    if total > page * current_app.config['POSTS_PER_PAGE'] else None
-TypeError: '>' not supported between instances of 'dict' and 'int'
-2019-06-16 18:01:03,788 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 18:01:13,749 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 146, in search
-    if total > page * current_app.config['POSTS_PER_PAGE'] else None
-TypeError: '>' not supported between instances of 'dict' and 'int'
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\user_popup.html", line 16, in top-level template code
+    {{ _('%(count)d following', count=user.followed.count()) }}</p>
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'following'
+2019-06-20 22:33:06,911 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:36:42,881 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:39:21,671 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:43:25,849 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:47:24,475 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:50:18,078 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:52:24,910 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:58:50,669 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 11:38:09,404 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 11:41:33,416 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 11:43:07,316 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 11:48:00,554 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:03:15,466 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:13:06,751 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:17:07,919 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:27:23,274 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:27:46,476 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:29:28,985 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:29:39,756 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:47:00,177 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:53:23,519 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:55:15,454 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-22 12:55:18,691 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]

@@ -1,4 +1,4 @@
-2019-06-16 18:01:31,751 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+2019-06-23 13:11:59,713 ERROR: Exception on /user/Tom [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,35 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 146, in search
-    if total > page * current_app.config['POSTS_PER_PAGE'] else None
-TypeError: '>' not supported between instances of 'dict' and 'int'
-2019-06-16 18:36:33,334 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 18:38:07,040 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 18:41:29,357 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-18 19:42:29,886 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-18 19:51:01,010 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-18 19:54:13,360 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-18 20:50:58,272 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-20 22:17:41,269 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-20 22:23:13,810 ERROR: Exception on /user/Liz Maisey/popup [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 157, in user_popup
-    return render_template('user_popup.html', user=user)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 77, in user
+    next_url=next_url, prev_url=prev_url)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 134, in render_template
     return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
@@ -59,12 +32,28 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\user_popup.html", line 15, in template
-    <p>{{ _('%(count)d followers', count=user.followers.count() }},
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\user.html", line 16, in template
+    <p><a href="{{ url_for('auth.change_password'}}">{{ _('Change Password') }}</a></p>
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 497, in _parse
     return Parser(self, source, name, encode_filename(filename)).parse()
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 901, in parse
     result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 213, in parse_if
+    'name:endif'))
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 875, in subparse
     add_data(self.parse_tuple(with_condexpr=True))
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 620, in parse_tuple
@@ -93,8 +82,8 @@ Traceback (most recent call last):
     node = self.parse_postfix(node)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 676, in parse_postfix
     node = self.parse_call(node)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 785, in parse_call
-    value = self.parse_expression()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 790, in parse_call
+    args.append(self.parse_expression())
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
     return self.parse_condexpr()
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
@@ -115,14 +104,10 @@ Traceback (most recent call last):
     left = self.parse_pow()
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
     left = self.parse_unary()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 547, in parse_unary
-    node = self.parse_postfix(node)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 676, in parse_postfix
-    node = self.parse_call(node)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 793, in parse_call
-    self.stream.expect('rparen')
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 388, in expect
-    next(self)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 564, in parse_primary
+    next(self.stream)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 359, in __next__
     self.current = next(self._iter)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 562, in wrap
@@ -130,4 +115,8 @@ Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 690, in tokeniter
     filename)
 jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
-2019-06-20 22:28:20,902 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 13:12:50,197 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 13:13:31,554 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 18:56:22,460 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 19:06:23,177 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 19:07:03,967 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]

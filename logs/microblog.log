@@ -1,4 +1,46 @@
-2019-06-22 12:55:21,996 ERROR: Exception on /index [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+2019-06-23 20:35:20,918 ERROR: Exception on / [POST] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 232, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\util\retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\packages\six.py", line 686, in reraise
+    raise value
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\program files (x86)\python36-32\Lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\program files (x86)\python36-32\Lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\program files (x86)\python36-32\Lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\program files (x86)\python36-32\Lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "c:\program files (x86)\python36-32\Lib\http\client.py", line 964, in send
+    self.connect()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x04A674D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,42 +56,28 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 47, in index
-    prev_url=prev_url)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
-    {%- block html %}
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
-    {% block body -%}
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block "body"
-    {% block navbar %}
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\base.html", line 41, in block "navbar"
-    {% set new_messages = current_user.new_messages() %}
-jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'new_messages'
-2019-06-22 12:57:16,525 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 12:58:20,012 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 18:25:01,637 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 18:25:13,350 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 18:47:18,226 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 18:47:46,596 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 18:50:06,068 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 18:50:24,395 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-22 18:52:49,226 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-23 11:45:01,894 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 35, in index
+    db.session.commit()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\session.py", line 943, in commit
+    self.transaction.commit()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\session.py", line 474, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\event\attr.py", line 246, in __call__
+    fn(*args, **kw)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\models.py", line 37, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\search.py", line 11, in add_to_index
+    body=payload)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\elasticsearch\client\utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\elasticsearch\client\__init__.py", line 364, in index
+    "POST", _make_path(index, doc_type, id), params=params, body=body
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\elasticsearch\transport.py", line 353, in perform_request
+    timeout=timeout,
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 244, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x04A674D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x04A674D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2019-06-23 20:48:16,559 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 21:06:38,932 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]

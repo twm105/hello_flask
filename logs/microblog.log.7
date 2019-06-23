@@ -1,4 +1,4 @@
-2019-06-23 20:30:21,027 ERROR: Exception on / [POST] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+2019-06-23 19:08:58,563 ERROR: Exception on /index [POST] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
     (self._dns_host, self.port), self.timeout, **extra_kw)
@@ -37,7 +37,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x04AAED50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x04ACDB50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
 
 During handling of the above exception, another exception occurred:
 
@@ -78,5 +78,8 @@ Traceback (most recent call last):
     timeout=timeout,
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 244, in perform_request
     raise ConnectionError("N/A", str(e), e)
-elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x04AAED50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x04AAED50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
-2019-06-23 20:34:54,411 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x04ACDB50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x04ACDB50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2019-06-23 19:10:12,258 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 19:10:48,781 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 19:21:50,151 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-23 19:22:13,739 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
