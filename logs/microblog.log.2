@@ -1,95 +1,4 @@
-2019-06-16 17:54:08,122 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 674, in comparator
-    comparator_factory = self.type.comparator_factory
-AttributeError: 'NoneType' object has no attribute 'comparator_factory'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\models.py", line 22, in search
-    db.case(when, value=cls.id)), total
-  File "<string>", line 2, in order_by
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\base.py", line 201, in generate
-    fn(self, *args[1:], **kw)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 1716, in order_by
-    criterion = self._adapt_col_list(criterion)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in _adapt_col_list
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in <listcomp>
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 4263, in _literal_as_label_reference
-    elif hasattr(element, '__clause_element__'):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 684, in __getattr__
-    return getattr(self.comparator, key)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\util\langhelpers.py", line 767, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 678, in comparator
-    "is not a TypeEngine class or object" % self.type)
-TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
-2019-06-16 17:54:22,395 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 674, in comparator
-    comparator_factory = self.type.comparator_factory
-AttributeError: 'NoneType' object has no attribute 'comparator_factory'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\models.py", line 22, in search
-    db.case(when, value=cls.id)), total
-  File "<string>", line 2, in order_by
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\base.py", line 201, in generate
-    fn(self, *args[1:], **kw)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 1716, in order_by
-    criterion = self._adapt_col_list(criterion)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in _adapt_col_list
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\orm\query.py", line 292, in <listcomp>
-    for o in cols
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 4263, in _literal_as_label_reference
-    elif hasattr(element, '__clause_element__'):
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 684, in __getattr__
-    return getattr(self.comparator, key)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\util\langhelpers.py", line 767, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-  File "c:\users\tmais\envs\hello_flask\lib\site-packages\sqlalchemy\sql\elements.py", line 678, in comparator
-    "is not a TypeEngine class or object" % self.type)
-TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
-2019-06-16 17:58:00,159 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 17:58:11,778 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+2019-06-16 18:01:31,751 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -108,8 +17,15 @@ Traceback (most recent call last):
   File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 146, in search
     if total > page * current_app.config['POSTS_PER_PAGE'] else None
 TypeError: '>' not supported between instances of 'dict' and 'int'
-2019-06-16 18:01:03,788 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
-2019-06-16 18:01:13,749 ERROR: Exception on /search [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
+2019-06-16 18:36:33,334 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-16 18:38:07,040 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-16 18:41:29,357 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-18 19:42:29,886 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-18 19:51:01,010 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-18 19:54:13,360 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-18 20:50:58,272 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:17:41,269 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
+2019-06-20 22:23:13,810 ERROR: Exception on /user/Liz Maisey/popup [GET] [in c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -125,6 +41,93 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 146, in search
-    if total > page * current_app.config['POSTS_PER_PAGE'] else None
-TypeError: '>' not supported between instances of 'dict' and 'int'
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\main\routes.py", line 157, in user_popup
+    return render_template('user_popup.html', user=user)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\templates\user_popup.html", line 15, in template
+    <p>{{ _('%(count)d followers', count=user.followers.count() }},
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 547, in parse_unary
+    node = self.parse_postfix(node)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 676, in parse_postfix
+    node = self.parse_call(node)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 785, in parse_call
+    value = self.parse_expression()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 547, in parse_unary
+    node = self.parse_postfix(node)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 676, in parse_postfix
+    node = self.parse_call(node)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\parser.py", line 793, in parse_call
+    self.stream.expect('rparen')
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 388, in expect
+    next(self)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "c:\users\tmais\envs\hello_flask\lib\site-packages\jinja2\lexer.py", line 690, in tokeniter
+    filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2019-06-20 22:28:20,902 INFO: Microblog startup [in C:\Users\tmais\Documents\Coding\Python\Projects\hello_flask\app\__init__.py:77]
